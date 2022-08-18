@@ -7,7 +7,7 @@ from transformers import Speech2TextProcessor, Speech2TextForConditionalGenerati
 from datasets import load_dataset
 import soundfile as sf
 
-token = '5653969569:AAGw2XXOJN9gaRtK-OBo5-bfR7cHILPiazU'
+token = 'FILL IT'
 bot = telebot.TeleBot(token)
 
 model = Speech2TextForConditionalGeneration.from_pretrained("facebook/s2t-small-mustc-en-ru-st")
@@ -15,7 +15,7 @@ processor = Speech2TextProcessor.from_pretrained("facebook/s2t-small-mustc-en-ru
 
 
 def query(filename):
-    API_TOKEN = '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'
+    API_TOKEN = 'FILL IT'
     API_URL = "https://api-inference.huggingface.co/models/facebook/s2t-small-mustc-en-ru-st"
     headers = {"Authorization": f"Bearer {API_TOKEN}"}
     with open(filename, "rb") as f:
