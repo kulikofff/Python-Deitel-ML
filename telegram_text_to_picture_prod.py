@@ -17,16 +17,6 @@ import os
 
 from diffusers import StableDiffusionPipeline
 
-'''
-#For developing translate from RU to EN
-from transformers import FSMTForConditionalGeneration, FSMTTokenizer
-mname = "facebook/wmt19-ru-en"
-tokenizer = FSMTTokenizer.from_pretrained(mname)
-model = FSMTForConditionalGeneration.from_pretrained(mname)
-'''
-
-token = '5789547990:AAHOqaE4mqkGrtqenxUvlWHgBLWAw9QLwD4'
-bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
