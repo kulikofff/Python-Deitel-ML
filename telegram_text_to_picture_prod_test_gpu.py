@@ -17,8 +17,9 @@ import os
 
 from diffusers import StableDiffusionPipeline
 
-
+token = 'FILL IT'
 bot = telebot.TeleBot(token)
+
 
 @bot.message_handler(commands=['start'])
 def start_message(message):
