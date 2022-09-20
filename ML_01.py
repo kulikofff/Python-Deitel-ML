@@ -5,8 +5,8 @@ import seaborn as sns
 import sys
 
 
-#rolls = [random.randrange(1, 7) for i in range(60000)]
-rolls = [random.randrange(1, 7) for i in range(int(sys.argv[1]))]
+rolls = [random.randrange(1, 7) for i in range(60000)]
+#rolls = [random.randrange(1, 7) for i in range(int(sys.argv[1]))]
 values, frequencies = np.unique(rolls, return_counts=True)
 print(values, frequencies)
 
