@@ -7,6 +7,17 @@ from pydataset import data
 ### DATASET 1 ###
 california = fetch_california_housing()
 
+print('Type of dataset:')
+print(type(california))
+print()
+#It's a bunch - https://scikit-learn.org/stable/modules/generated/sklearn.utils.Bunch.html
+#Bunch objects are sometimes used as an output for functions and methods. 
+#They extend dictionaries by enabling values to be accessed by key, bunch["value_key"], or by an attribute, bunch.value_key.
+#A Bunch is a subclass of dict; it supports all the methods a dict does:
+
+print('Input dataset:')
+print(california)
+print()
 print('Description:')
 print(california.DESCR)
 print()
@@ -71,6 +82,10 @@ for content in california_df.values:
 ### DATASET 2 ###
 
 burt = data('Burt')
+print()
+print('Type of dataset:')
+print(type(burt))
+print()
 print('Burt Dataset:')
 print(burt)
 
@@ -79,3 +94,5 @@ for content in burt.values:
           with open(filename4, 'a+', newline='') as f:
                writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                writer.writerow(content)
+
+
