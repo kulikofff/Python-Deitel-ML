@@ -30,7 +30,7 @@ print()
 print('Features:')
 print(california.feature_names)
 print()
-print('Head:')
+print('Data:')
 print(california.data)
 print()
 print('Items:')
@@ -40,7 +40,7 @@ print()
 print('Values:')
 print()
 print(california.values())
-
+print()
 
 ####Write features to file:
 def user_input_features():
@@ -79,8 +79,25 @@ for content in california_df.values:
                writer = csv.writer(f, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
                writer.writerow(content)
 
-### DATASET 2 ###
+#Explore final dataframe
+print('Head (only after DataFrame):')
+print(california_df.head)
+print()
+print('DF Describe:')
+pd.set_option('precision', 2)
+print(california_df.describe())
+print()
 
+#Visualization of data correlation
+import seaborn as sns
+import matplotlib.pyplot as plt
+sns.set(font_scale=1.1)
+sns.set_style('whitegrid')
+grid = sns.pairplot(data=california_df, vars=california_df.columns[0:9])
+plt.show()
+
+
+### DATASET 2 ###
 burt = data('Burt')
 print()
 print('Type of dataset:')
